@@ -1,0 +1,40 @@
+@mixin cardSize {
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 40px;
+    backface-visibility: hidden;
+    
+}
+.hover{
+    width: fit-content;
+    display: flex;
+    position: relative;
+    &:hover{
+        .cards{
+            transform: rotateY(180deg)
+        }
+    }
+.cards{
+    position: relative;
+    transform-style: preserve-3d;
+    transition-duration: 1.5s;
+}
+    .front{
+        @include cardSize;
+        background-color: yellowgreen;
+        z-index: 2;
+        
+    }
+    .back{
+        @include cardSize;
+        background-color: hotpink;
+        transform: rotateY(180deg);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}

@@ -1,0 +1,53 @@
+.hover {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.hover:hover .cards {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.hover .cards {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+}
+
+.hover .front {
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 40px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: yellowgreen;
+  z-index: 2;
+}
+
+.hover .back {
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 40px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: hotpink;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/*# sourceMappingURL=main.css.map */
